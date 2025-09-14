@@ -1,0 +1,257 @@
+header {
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2F529E;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    background-color: #1F335A;
+    padding: 10px 0;
+    margin: 0; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar img {     
+    position: absolute;       /*propriedade que tira o elemento do fluxo normal da página e permite posicioná-lo em relação ao elemento pai mais próximo que tenha position: relative (ou, se não houver, em relação ao body).*/
+    left: 20px;  
+    margin-right: 20px;         
+}
+
+
+.navbar li a {
+    color: white;                
+    text-decoration: none;       
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.navbar li a:hover {
+    background-color: #1d366b; 
+    color: rgb(27, 27, 235); 
+    transition: 0.3s;           
+}
+
+.inicio {
+    color: white;
+    font-size: 16px;
+    text-align: left;        
+    background-color: #2F529E;
+    margin: 0;               
+    padding: 15px;  
+    border-radius: 0 0 8px 8px;  
+    text-align: center;     
+}
+
+.inicio h3 {
+    line-height: 1;
+    color: white;   
+    font-size: 25px; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;              
+}
+
+.inicio h2 {
+    line-height: 1;
+    color: white;    
+    font-size: 45px; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+}
+
+.inicio img:hover {
+    transform: scale(1.1);         
+    transition: 0.3s;               
+}
+
+.sobre-mim {
+    color:white;
+    font-size: 17px;
+    line-height: 1.5;
+    display:flex;
+    align-items: center;
+    text-align: justify;
+    gap: 20px;
+    background-color: #2F529E;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 1050px;            /* largura maior para retângulo */
+    height: 300px;               /* altura menor para retângulo horizontal */
+    width: 80%;                  /* largura responsiva */
+    margin: 0 auto;  
+}
+
+.sobre-mim h2 {
+    color: white;    
+    font-size: 25px;              
+}
+
+.lista_projetos {
+    color: white;
+    font-size: 16px;
+    text-align: left;        
+    background-color: #2F529E;
+    margin: 0; 
+    padding:20px;              
+    padding-bottom: 50px; 
+    border-radius: 15px;
+}
+
+.lista_projetos ul {
+    color: white;
+    font-size: 15px;
+    display: flex;           
+    gap: 20px;               
+    list-style: none;        
+    padding: 0;
+    margin: 0;
+    text-align:center;
+}
+
+.lista_projetos ul li {
+    background-color: #1d366b;
+    line-height: 1.5;
+    border-radius: 8px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;         /* Organiza os itens em coluna fixas, tem que usar o display flex */             
+}
+
+.lista_projetos ul li:hover {
+    transform: scale(1.05);         /*aumenta ou diminui o tamanho de um elemento quando passa o mouse por cima*/
+    transition: 0.3s;               /*tempo que leva pra acontecer a ação quando passa o mouse por cima*/
+}
+
+.lista_projetos h2 {
+    color: white;    
+    font-size: 25px;                     
+    text-align: center;
+}
+
+.lista_projetos li strong {   
+    color: white;    
+    font-size: 18px;                     
+    text-align: center;
+}
+
+
+
+.habilidades {
+    background-color: #1d366b;
+    border-radius: 15px;
+    margin: 0;               
+    padding: 15px; 
+}
+
+.habilidades h2 {
+    color: white;    
+    font-size: 25px;                     
+    text-align: center;
+}
+
+.habilidades ul {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);  /* Define 3 colunas com largura fixa de 300px, só funciona com grid */
+    grid-template-rows: repeat(2, 150px);     /* Define 2 linhas com altura fixa de 150px, idem*/
+    gap: 20px;                              
+    justify-content: center;  
+    line-height: 1.5;               
+    padding: 0;
+    margin: 0 auto;                          
+    list-style: none;
+    padding-bottom: 50px;
+}
+
+.habilidades ul li {
+    font-size: 14px;
+    background-color: #2F529E;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;          
+    display: flex;
+    flex-direction: column;         
+    justify-content: center;        
+    text-align: center;
+    word-wrap: break-word;          /*Quebra linha*/
+}
+
+.habilidades ul li:hover {
+    background-color: #1F335A;
+    transform: scale(1.05);         /*aumenta ou diminui o tamanho de um elemento quando passa o mouse por cima*/
+    transition: 0.3s;               /*tempo que leva pra acontecer a ação quando passa o mouse por cima*/
+}
+
+.habilidades ul li strong {
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.contato {
+    background-color: #2F529E;
+    border-radius: 15px;              
+    padding: 15px; 
+    color: white;
+    margin: 0 350px 0 350px;
+    padding-bottom: 50px;
+}
+
+.contato h2 {  
+    font-size: 25px;                     
+    text-align: center;
+}
+
+.contato form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.linha {
+    display: flex;           
+    gap: 20px;               
+    margin-bottom: 15px;     
+    color:white;                
+}
+
+.campo {
+    flex: 1;                        /* cada campo ocupa espaço igual */
+    display: flex;
+    flex-direction: column;         /* label em cima do input */
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid ;
+    width: 100%;                    /* ocupa todo o espaço do campo */
+    box-sizing: border-box;         /* inclui padding na largura total */
+}
+
+input[type="submit"] {              /*seletor CSS que estiliza apenas os elementos cujo atributo type é igual a "submit"*/
+    background-color: #1d366b;
+    color: white;
+    font-size: 14px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: whitesmoke;
+    color:#1d366b;
+}
+
+footer{
+    text-align: center;
+}

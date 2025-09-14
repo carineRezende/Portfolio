@@ -1,90 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Carine Rezende</title>
 </head>
 <body>
 
-<header><strong>Portfólio Carine Rezende</strong></header>
-<nav>
-    <ul class="menu">
+<header>
+    <nav>
+        <ul class="navbar">
+            <img src="img/logo_portfolio.png" alt="Logo Carine Rezende" width="70">
             <li><a href="#inicio">Início</a></li> 
             <li><a href="#sobre">Sobre</a></li>
-            <li> <a href="#projetos">Projetos</a></li>
+            <li><a href="#projetos">Projetos</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#contato">Contato</a></li>
-    </ul>
-</nav>
+        </ul>
+    </nav>
+</header>
 
     <section id ="inicio">
-        <div>
-            <h1> Olá, eu sou a <strong>Carine Rezende</strong></h1>
-            Seja bem vinda ao meu portifólio
-        </div>
-    </section>
-
-    <section id="sobre">         
-        <h2>Sobre mim</h2>
-        <div class="sobre">
-            <img src="img/fotoCarine.jpg" alt="Foto de Carine Rezende" width="150"> 
-            <p>
-                Meu nome é Carine Rezende, tenho 25 anos, sou de Contagem/MG e atualmente estudo Análise e Desenvolvimento de Sistemas (ADS).
-                Após uma breve passagem pelo mundo da engenharia aeronáutica, percebi que meu lugar estava nas telas e na tecnologia. 
-                Descobri que gosto de criar e acompanhar processos acontecendo diretamente pelo computador, e que a vida de aulas de aerodinâmicas não era mais para mim.
-                Foi assim que me apaixonei pela tecnologia, e sigo explorando meu caminho, aprendendo e descobrindo onde posso brilhar.
+        <div class="inicio">
+            <h3> Olá, me chamo</h3> 
+            <h2>Carine Dias Rezende</h2>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas (ADS) | Apaixonada por tecnologia e inovação <br><br>
+            Seja bem-vindo ao meu portfólio.
             </p>
+            <a href="https://www.linkedin.com/in/carine-rezende-5a8955211" target="_blank">
+                <img src="img/linkedin.png" alt="Logo LinkedIn" width="40"></a>
+            <a href="https://github.com/carineRezende" target="_blank">
+            <img src="img/github.png" alt="Logo GitHub" width="40"></a>
+        </div>    
+    </section>
+    <br>
+    <br>  
+    <section id="sobre">        
+        <div class="sobre-mim">
+            <img src="img/fotoCarine.jpg" alt="Foto de Carine Rezende" height="250"> 
+                <div>
+                    <h2>Sobre mim</h2>
+                    <p> 
+                        Tenho 25 anos, sou de Contagem/MG e atualmente estudo Análise e Desenvolvimento de Sistemas (ADS).
+                        Após uma breve passagem pelo mundo da engenharia aeronáutica, percebi que meu lugar estava nas telas e na tecnologia. 
+                        Descobri que gosto de criar e acompanhar processos acontecendo diretamente pelo computador, e que a vida de aulas de aerodinâmicas não era mais para mim.
+                        Foi assim que me apaixonei pela tecnologia, e sigo explorando meu caminho, aprendendo e descobrindo onde posso brilhar.
+                    </p>
+                </div>
         </div>
     </section>
-
+    <br>
+    <br> 
+    <br>   
     <section id="projetos">
-        <div>
-            <br>
+        <div class="lista_projetos">
             <h2>Projetos</h2>
             <ul>
-                <p><li><strong>BarExpress</strong>: Sistema desktop desenvolvido em Java, utilizando Swing para a interface gráfica (GUI). O projeto foi criado para apoiar o gerenciamento de uma distribuidora de bebidas, oferecendo funcionalidades como sistema de login, cadastros de clientes, produtos, usuários, fornecedores e funcionários, além de menus de navegação intuitivos. Para a persistência e manipulação dos dados, foi implementada a integração direta com o banco de dados MySQL por meio de JDBC.</li></p>
-                <p><li><strong>Casos de SRAG Hospitalizados (2022 e 2024)</strong>: Desenvolvimento de um dashboard interativo no Power BI para análise de casos de Síndrome Respiratória Aguda Grave (SRAG) hospitalizados no período de 2022 a 2024. Foram tratados e organizados mais de 1 milhão de registros de bases governamentais utilizando Excel antes da integração com o Power BI, permitindo identificar padrões geográficos, perfis demográficos, sintomas mais recorrentes e principais fatores de risco. A solução contribuiu para a geração de insights relevantes no contexto da saúde pública.</li></p>
-                <p><li><strong>Auto Solar</strong>: Desenvolvimento de um protótipo funcional de estação de carregamento de automóveis elétricos, utilizando energia solar fotovoltaica. O projeto envolveu planejamento e modelagem 3D no Fusion 360, impressão 3D em PLA, montagem de estrutura com totens de carregamento, painel solar e regulador de tensão conectado a uma bateria de armazenamento. O protótipo permite carregar dispositivos eletrônicos, como celulares, demonstrando a viabilidade do conceito. O projeto enfatiza sustentabilidade, inovação e mobilidade urbana, contribuindo para a redução da pegada de carbono e promovendo o uso de fontes de energia limpa e renovável.</li></p>
+                <li>
+                    <strong>BarExpress</strong>
+                    <p>Sistema desktop desenvolvido em Java, utilizando Swing para a interface gráfica (GUI). O projeto foi criado para apoiar o gerenciamento de uma distribuidora de bebidas, oferecendo funcionalidades como sistema de login, cadastros de clientes, produtos, usuários, fornecedores e funcionários, além de menus de navegação intuitivos. Para a persistência e manipulação dos dados, foi implementada a integração direta com o banco de dados MySQL por meio de JDBC.</p>
+                    <img src="img/barexpress.png" alt="Tela sistema BarExpress" width="400">
+                </li>
+                <li>
+                    <strong>Casos de SRAG Hospitalizados (2022 e 2024)</strong>
+                    <p>Desenvolvimento de um dashboard interativo no Power BI para análise de casos de Síndrome Respiratória Aguda Grave (SRAG) hospitalizados no período de 2022 a 2024. Foram tratados e organizados mais de 1 milhão de registros de bases governamentais utilizando Excel antes da integração com o Power BI, permitindo identificar padrões geográficos, perfis demográficos, sintomas mais recorrentes e principais fatores de risco. A solução contribuiu para a geração de insights relevantes no contexto da saúde pública.</p>
+                    <br>
+                    <img src="img/SARG.png" alt="Tela dashboard" width="500">
+                </li>
+                <li>
+                    <strong>Auto Solar</strong>
+                    <p>Desenvolvimento de um protótipo funcional de estação de carregamento de automóveis elétricos, utilizando energia solar fotovoltaica. O projeto envolveu planejamento e modelagem 3D no Fusion 360, impressão 3D em PLA, montagem de estrutura com totens de carregamento, painel solar e regulador de tensão conectado a uma bateria de armazenamento. O protótipo permite carregar dispositivos eletrônicos, como celulares, demonstrando a viabilidade do conceito. O projeto enfatiza sustentabilidade, inovação e mobilidade urbana, contribuindo para a redução da pegada de carbono e promovendo o uso de fontes de energia limpa e renovável.</p>
+                    <img src="img/AutoSolar.png" alt="Protótipo Auto Solar" width="450">
+                </li>
             </ul>
         </div>
     </section>
 
     <section id="habilidades">
-        <div>
+        <div class="habilidades">
             <br>
             <h2>Habilidades</h2>
             <ul>
-                <li>Linguagens de Programação: Java - básico/intermediário: lógica, sintaxe, POO e conexão com banco de dados (JDBC);</li>
-                <li>Desenvolvimento Web: HTML5, CSS3 (noções básicas); noções de frameworks front-end (Bootstrap ou similar); conhecimento inicial em consumo de APIs REST;</li>
-                <li>Banco de Dados: Modelagem conceitual (ER); SQL (comandos básicos - SELECT, INSERT, etc.) e modelagem com MySQL;</li>
-                <li>Ferramentas e Tecnologias: Git / GitHub (versionamento de código, commits, branches); Visual Studio Code, Eclipse e IntelliJ IDEA; noções de linha de comando (terminal Windows);</li>
-                <li>Metodologias Ágeis: Conceitos de Scrum e Kanban (participação em projetos profissionais com quadro de tarefas e sprints);</li>
-                <li>Ferramentas de Gestão / Automação (No-Code/Low-Code)</li>
+                <li>
+                    <strong>Linguagens de Programação</strong> <br> Java (básico/intermediário): lógica, sintaxe, POO e conexão com banco de dados (JDBC)
+                </li>
+                <li>
+                    <strong>Desenvolvimento Web</strong> <br> HTML5, CSS3 (noções básicas); noções de frameworks front-end (Bootstrap ou similar); conhecimento inicial em consumo de APIs REST
+                </li>
+                <li>
+                    <strong>Banco de Dados</strong> <br> Modelagem conceitual (ER); SQL (comandos básicos - SELECT, INSERT, etc.) e modelagem com MySQL
+                </li>
+                <li>
+                    <strong>Ferramentas e Tecnologias</strong> <br> Git / GitHub (versionamento de código, commits, branches); Visual Studio Code, Eclipse e IntelliJ IDEA; noções de linha de comando (terminal Windows)
+                </li>
+                <li>
+                    <strong>Metodologias Ágeis</strong> <br> Conceitos de Scrum e Kanban (participação em projetos profissionais com quadro de tarefas e sprints)
+                </li>
+                <li>
+                    <strong>Ferramentas de Gestão/Automação (No-Code/Low-Code)</strong> <br> ClickUp, Zapier, Pluga, n8n
+                </li>
             </ul>
         </div>
     </section>
-
+    <br>
+    <br>
     <section id="contato">
-        <div>
-            <br>
-            <h2>Contato</h2>
-            <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br><br>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="mensagem">Mensagem:</label><br>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br><br>
-
+        <div class="contato">
+            <h2>Contato</h2> <br>
+            <form>  
+                <div class="linha">
+                    <div class="campo">
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" id="nome" name="nome" required> <br><br>
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required> <br><br>
+                    </div>
+                </div>
+                
+                <div class="linha">
+                    <div class="campo">
+                        <label for="mensagem">Mensagem:</label><br>
+                        <textarea id="mensagem" name="mensagem" rows="4" required></textarea> <br><br>
+                    </div>
+                </div>
                 <input type="submit" value="Enviar">
             </form>
-
-            <h3>Email</h3>
-            carined.rezen@gmail.com
-        
+        </div>
+    </section>
+    <br>
+    <br>      
     <footer>
         <br>
         <p>© 2025 Carine Rezende. Todos os direitos reservados.</p>
