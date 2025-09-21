@@ -4,10 +4,10 @@ header {
     text-align: center;
 }
 
+
 body {
     background-color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #2F529E;
+    font-family: sans-serif;
 }
 
 .navbar {
@@ -15,179 +15,273 @@ body {
     justify-content: center;
     gap: 20px;
     list-style: none;
-    background-color: #1F335A;
+    background-color: #4f772d;
     padding: 10px 0;
-    margin: 0; 
+    margin: 0;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.navbar img {     
-    position: absolute;       /*propriedade que tira o elemento do fluxo normal da página e permite posicioná-lo em relação ao elemento pai mais próximo que tenha position: relative (ou, se não houver, em relação ao body).*/
-    left: 20px;  
-    margin-right: 20px;         
+.navbar img {
+    position: absolute;                 /*propriedade que tira o elemento do fluxo normal da página e permite posicioná-lo em relação ao elemento pai mais próximo que tenha position: relative (ou, se não houver, em relação ao body).*/
+    left: 20px;
+    margin-right: 20px;
+    max-width: 70px; 
+    height: auto;    
 }
 
-
 .navbar li a {
-    color: white;                
-    text-decoration: none;       
+    color: white;
+    text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
     border-radius: 8px;
 }
 
 .navbar li a:hover {
-    background-color: #1d366b; 
-    color: rgb(27, 27, 235); 
-    transition: 0.3s;           
+    background-color: #ecf39e;
+    transition: 0.3s;
 }
 
 .inicio {
     color: white;
     font-size: 16px;
-    text-align: left;        
-    background-color: #2F529E;
-    margin: 0;               
-    padding: 15px;  
-    border-radius: 0 0 8px 8px;  
-    text-align: center;     
+    text-align: center;
+    background-color: #31572c;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;                 /* largura maior para retângulo */
+    height: 300px;                      /* altura menor para retângulo horizontal */
+    margin: 0 auto;    
 }
 
 .inicio h3 {
     line-height: 1;
-    color: white;   
-    font-size: 25px; 
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;              
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
 }
 
 .inicio h2 {
     line-height: 1;
-    color: white;    
-    font-size: 45px; 
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+    color: white;
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.inicio img {
+    max-width: 40px; 
+    height: auto;  
+    filter: invert(1);  
 }
 
 .inicio img:hover {
-    transform: scale(1.1);         
-    transition: 0.3s;               
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .sobre-mim {
-    color:white;
-    font-size: 17px;
+    color: #31572c;
+    font-family: sans-serif;
+    font-size: 18px;
     line-height: 1.5;
-    display:flex;
+    display: flex;
     align-items: center;
     text-align: justify;
     gap: 20px;
-    background-color: #2F529E;
+    background-color: #f0f0e0;
     border-radius: 15px;
-    padding: 20px;
-    max-width: 1050px;            /* largura maior para retângulo */
-    height: 300px;               /* altura menor para retângulo horizontal */
-    width: 80%;                  /* largura responsiva */
-    margin: 0 auto;  
+    padding: 20px;                    
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sobre-mim h2 {
-    color: white;    
-    font-size: 25px;              
+    color:#31572c;
+    font-size: 30px;
+}
+
+.sobre-mim img {
+    max-width: 250px; 
+    width: 100%;      
+    height: auto; 
 }
 
 .lista_projetos {
     color: white;
     font-size: 16px;
-    text-align: left;        
-    background-color: #2F529E;
-    margin: 0; 
-    padding:20px;              
-    padding-bottom: 50px; 
-    border-radius: 15px;
-}
-
-.lista_projetos ul {
-    color: white;
-    font-size: 15px;
-    display: flex;           
-    gap: 20px;               
-    list-style: none;        
-    padding: 0;
+    text-align: left;
+    background-color: #31572c;
     margin: 0;
-    text-align:center;
-}
-
-.lista_projetos ul li {
-    background-color: #1d366b;
-    line-height: 1.5;
-    border-radius: 8px;
-    padding-bottom: 10px;
-    padding-top: 15px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;         /* Organiza os itens em coluna fixas, tem que usar o display flex */             
-}
-
-.lista_projetos ul li:hover {
-    transform: scale(1.05);         /*aumenta ou diminui o tamanho de um elemento quando passa o mouse por cima*/
-    transition: 0.3s;               /*tempo que leva pra acontecer a ação quando passa o mouse por cima*/
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 15px;
 }
 
 .lista_projetos h2 {
-    color: white;    
-    font-size: 25px;                     
+    color: white;
+    font-size: 25px;
     text-align: center;
 }
 
-.lista_projetos li strong {   
-    color: white;    
-    font-size: 18px;                     
+.lista_projetos ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.lista_projetos ul li {
+    background-color: #4f772d;
+    border-radius: 12px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;               /* Esconde qualquer conteúdo que ultrapasse os limites do elemento */
+    cursor: pointer;                /* Muda o cursor para indicar que o item é clicável */
+    transition: all 0.3s ease;      /* Transição suave para todas as propriedades */ 
+    height: 500px;                  /* Altura fixa para os itens */
+}
+
+.lista_projetos ul li:hover {
+    transform: translate(-5px);           
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);   /* Adiciona uma sombra ao redor do item */
+}
+
+.projeto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.projeto-item strong {
+    color: white;
+    font-size: 18px;
     text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.projeto-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.projeto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(79, 119, 45, 0.95) 0%, rgba(49, 87, 44, 0.98) 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
+    z-index: 3;
+}
+
+.lista_projetos ul li:hover .projeto-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lista_projetos ul li:hover .projeto-item {
+    opacity: 0.1;
+}
+
+.projeto-overlay h3 {
+    color: #ecf39e;
+    font-size: 19px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.projeto-overlay p {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0;
+    overflow-y: auto;                       /* Scroll se o texto for muito longo */
+}
+
+.lista_projetos ul li::after {
+    content: "🔍 Passe o mouse para ver detalhes";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 4;
+    white-space: nowrap;
+}
+
+.lista_projetos ul li:not(:hover)::after {
+    opacity: 1;
 }
 
 .habilidades {
-    background-color: #1d366b;
+    background-color: #4f772d;
     border-radius: 15px;
-    margin: 0;               
-    padding: 15px; 
+    margin: 0;
+    padding: 15px;
 }
 
 .habilidades h2 {
-    color: white;    
-    font-size: 25px;                     
+    color: white;
+    font-size: 25px;
     text-align: center;
 }
 
 .habilidades ul {
     display: grid;
-    grid-template-columns: repeat(3, 350px);  /* Define 3 colunas com largura fixa de 300px, só funciona com grid */
-    grid-template-rows: repeat(2, 150px);     /* Define 2 linhas com altura fixa de 150px, idem*/
-    gap: 20px;                              
-    justify-content: center;  
-    line-height: 1.5;               
+    grid-template-columns: repeat(3, 350px);          /* Define 3 colunas com largura fixa de 350px */
+    grid-template-rows: repeat(2, 150px);             /* Define 2 linhas com altura fixa de 150px */
+    gap: 20px;
+    justify-content: center;
+    line-height: 1.5;
     padding: 0;
-    margin: 0 auto;                          
+    margin: 0 auto;
     list-style: none;
     padding-bottom: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .habilidades ul li {
     font-size: 14px;
-    background-color: #2F529E;
+    background-color: #31572c;
     color: white;
     border-radius: 10px;
-    padding: 15px;          
+    padding: 15px;
     display: flex;
-    flex-direction: column;         
-    justify-content: center;        
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    word-wrap: break-word;          /*Quebra linha*/
+    word-wrap: break-word;              /*Quebra linha*/
 }
 
 .habilidades ul li:hover {
-    background-color: #1F335A;
-    transform: scale(1.05);         /*aumenta ou diminui o tamanho de um elemento quando passa o mouse por cima*/
-    transition: 0.3s;               /*tempo que leva pra acontecer a ação quando passa o mouse por cima*/
+    background-color: #90a955;
+    transform: scale(1.05);             /*aumenta ou diminui o tamanho de um elemento quando passa o mouse por cima*/
+    transition: 0.3s;                   /*tempo que leva pra acontecer a ação quando passa o mouse por cima*/
 }
 
 .habilidades ul li strong {
@@ -196,17 +290,19 @@ body {
     text-align: center;
 }
 
+
+
 .contato {
-    background-color: #2F529E;
-    border-radius: 15px;              
-    padding: 15px; 
-    color: white;
+    background-color: #f0f0e0;
+    border-radius: 15px;
+    padding: 15px;
+    color: #31572c;
     margin: 0 350px 0 350px;
     padding-bottom: 50px;
 }
 
-.contato h2 {  
-    font-size: 25px;                     
+.contato h2 {
+    font-size: 25px;
     text-align: center;
 }
 
@@ -216,10 +312,10 @@ body {
 }
 
 .linha {
-    display: flex;           
-    gap: 20px;               
-    margin-bottom: 15px;     
-    color:white;                
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    color: #31572c;
 }
 
 .campo {
@@ -231,13 +327,13 @@ body {
 input, textarea {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid ;
+    border: 1px solid;
     width: 100%;                    /* ocupa todo o espaço do campo */
     box-sizing: border-box;         /* inclui padding na largura total */
 }
 
 input[type="submit"] {              /*seletor CSS que estiliza apenas os elementos cujo atributo type é igual a "submit"*/
-    background-color: #1d366b;
+    background-color: #31572c;
     color: white;
     font-size: 14px;
     border: none;
@@ -247,9 +343,156 @@ input[type="submit"] {              /*seletor CSS que estiliza apenas os element
 
 input[type="submit"]:hover {
     background-color: whitesmoke;
-    color:#1d366b;
+    color: #31572c;
 }
 
-footer{
+footer {
     text-align: center;
 }
+
+
+@media (max-width: 1024px) {
+
+    .sobre-mim {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .habilidades ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .lista_projetos ul {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .lista_projetos ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .lista_projetos ul li {
+        height: 280px;
+    }
+    
+    .projeto-item img {
+        height: 180px;
+    }
+
+    .contato {
+        margin: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar img {
+        position: static;
+        margin: 0 auto;
+    }
+
+    .sobre-mim {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+   .habilidades {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    
+    .lista_projetos ul {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .lista_projetos ul li {
+        height: 320px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .projeto-item img {
+        height: 200px;
+    }
+    
+    .contato {
+        margin: 0 20px;
+    }
+
+    .lista_projetos ul li:active .projeto-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .lista_projetos ul li:active .projeto-item {
+        opacity: 0.1;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header {
+        font-size: 16px;
+    }
+
+    .inicio h2 {
+        font-size: 28px;
+    }
+
+    .inicio h3 {
+        font-size: 18px;
+    }
+
+    .navbar li a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .sobre-mim {
+        font-size: 15px;
+    }
+
+    .lista_projetos ul li {
+        height: 300px;
+        max-width: 300px;
+    }
+    
+    .projeto-item img {
+        height: 180px;
+    }
+    
+    .projeto-overlay {
+        padding: 15px;
+    }
+    
+    .projeto-overlay h3 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    
+    .projeto-overlay p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .habilidades {
+        padding: 20px;
+    }
+    
+    .contato {
+        margin: 0 10px;
+        padding: 10px;
+    }
+
+}
+
