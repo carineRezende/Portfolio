@@ -290,8 +290,6 @@ body {
     text-align: center;
 }
 
-
-
 .contato {
     background-color: #f0f0e0;
     border-radius: 15px;
@@ -349,7 +347,6 @@ input[type="submit"]:hover {
 footer {
     text-align: center;
 }
-
 
 @media (max-width: 1024px) {
 
@@ -494,5 +491,7 @@ footer {
         padding: 10px;
     }
 
+    
 }
+
 
