@@ -9,20 +9,17 @@ a {
     font-size: 18px;
 }
 
-a:hover {
-    background-color: #ecf39e;
-    transition: 0.3s;
-}
 
 #logo {
     font-size: 30px;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #4f772d;
+
 }
 
 header {
     font-size: 20px;
-
     display: flex;
     align-items: center;
     justify-content: space-between; /* logo à esquerda e botão à direita */
@@ -60,6 +57,13 @@ nav {
     border-radius: 8px; 
 }
 
+.navbar a:hover {
+    background-color: #ecf39e; 
+    color: #31572c;
+    transition: 0.3s;
+}
+
+
 #btnMenu {
     display: none;
 }
@@ -89,15 +93,18 @@ nav {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
 .inicio img {
     max-width: 40px; 
     height: auto;  
     filter: invert(1);  
+    outline: none;         
+    border: none;          
 }
 
 .inicio img:hover {
     transform: scale(1.1);
-    transition: 0.3s;
+    transition: 0.3s; 
 }
 
 .sobre-mim {
@@ -517,6 +524,8 @@ footer {
         opacity: 0.1;
     }
 }
+
+
 
  
 
