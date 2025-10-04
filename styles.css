@@ -1,46 +1,67 @@
-header {
-    font-size: 20px;
-    align-items: center;
-    text-align: center;
-}
-
-
 body {
     background-color: white;
     font-family: sans-serif;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-    background-color: #4f772d;
-    padding: 10px 0;
-    margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.navbar img {
-    position: absolute;                 /*propriedade que tira o elemento do fluxo normal da página e permite posicioná-lo em relação ao elemento pai mais próximo que tenha position: relative (ou, se não houver, em relação ao body).*/
-    left: 20px;
-    margin-right: 20px;
-    max-width: 70px; 
-    height: auto;    
-}
-
-.navbar li a {
-    color: white;
+a {
+    color:white;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 8px;
 }
 
-.navbar li a:hover {
+a:hover {
     background-color: #ecf39e;
     transition: 0.3s;
+}
+
+#logo {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo à esquerda e botão à direita */
+    padding: 0 1rem;
+    height: 70px;
+    box-sizing: border-box;
+    background-color: #4f772d;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* centraliza a navbar */
+}
+
+.navbar { 
+    font-family: sans-serif;
+    display: flex; 
+    list-style: none; 
+    gap: .5rem; 
+    position: relative; 
+    flex: 1; 
+    justify-content: center; 
+} 
+
+.navbar a { 
+    display: block; 
+    padding: .5rem; 
+    border-radius: 8px; 
+}
+
+#btnMenu {
+    display: none;
 }
 
 .inicio {
@@ -48,10 +69,10 @@ body {
     font-size: 16px;
     text-align: center;
     background-color: #31572c;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0px 0px 8px 8px;
     padding: 20px;                 /* largura maior para retângulo */
     height: 300px;                      /* altura menor para retângulo horizontal */
-    margin: 0 auto;    
+    margin: 70px auto 0 auto;   
 }
 
 .inicio h3 {
@@ -383,17 +404,79 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    #btnMenu {
+        position: absolute; 
+        right: 0;           
+        top: 50%;  
+        transform: translateY(-50%);
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        gap: .5rem;
+        background-color: #4f772d;
+        color: white;
     }
 
-    .navbar img {
-        position: static;
-        margin: 0 auto;
+    .hamburguer {
+        border-top: 2px solid;
+        width:20px;
+        color: white
+    }
+
+    .hamburguer::after, .hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active .hamburguer{
+        border-top-color: transparent;
+    }
+
+    #nav.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .navbar {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px; 
+        right: 0px; 
+        background-color: #4f772d;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: .6s;
+        z-index: 1000; 
+        height: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active .navbar{
+        height: calc(50vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .navbar a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid #ecf39e;
     }
 
     .sobre-mim {
@@ -405,7 +488,6 @@ footer {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
     
     .lista_projetos ul {
         grid-template-columns: 1fr;
@@ -436,62 +518,6 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-
-    header {
-        font-size: 16px;
-    }
-
-    .inicio h2 {
-        font-size: 28px;
-    }
-
-    .inicio h3 {
-        font-size: 18px;
-    }
-
-    .navbar li a {
-        font-size: 14px;
-        padding: 8px 10px;
-    }
-
-    .sobre-mim {
-        font-size: 15px;
-    }
-
-    .lista_projetos ul li {
-        height: 300px;
-        max-width: 300px;
-    }
-    
-    .projeto-item img {
-        height: 180px;
-    }
-    
-    .projeto-overlay {
-        padding: 15px;
-    }
-    
-    .projeto-overlay h3 {
-        font-size: 17px;
-        margin-bottom: 10px;
-    }
-    
-    .projeto-overlay p {
-        font-size: 13px;
-        line-height: 1.3;
-    }
-
-    .habilidades {
-        padding: 20px;
-    }
-    
-    .contato {
-        margin: 0 10px;
-        padding: 10px;
-    }
-
-    
-}
+ 
 
 

@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Carine Rezende</title>
@@ -10,9 +9,12 @@
 <body>
 
 <header>
-    <nav>
+    <a id="logo" href="">CDR</a>
+    <nav id="nav"> 
+        <button id="btnMenu">Menu
+            <span class="hamburguer"></span>
+        </button>   
         <ul class="navbar">
-            <img src="img/logo_portfolio.png" alt="Logo Carine Rezende" width="70">
             <li><a href="#inicio">Início</a></li> 
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#projetos">Projetos</a></li>
@@ -41,13 +43,22 @@
         <div class="sobre-mim">
             <img src="img/fotoCarine.jpg" alt="Foto de Carine Rezende"> 
                 <div>
-                    <h2>Sobre mim</h2>
-                    <p> 
+                    <h2>Sobre mim</h2>                   
+                        <p>
                         Tenho 25 anos, sou de Contagem/MG e atualmente estudo Análise e Desenvolvimento de Sistemas (ADS).
-                        Após uma breve passagem pelo mundo da engenharia aeronáutica, percebi que meu lugar estava nas telas e na tecnologia. 
-                        Descobri que gosto de criar e acompanhar processos acontecendo diretamente pelo computador, e que a vida de aulas de aerodinâmicas não era mais para mim.
-                        Foi assim que me apaixonei pela tecnologia, e sigo explorando meu caminho, aprendendo e descobrindo onde posso brilhar.
-                    </p>
+                        Desde muito jovem, sempre fui fascinada por entender como as coisas acontecem e fazer as coisas acontecerem de fato — a famosa “mão na massa”. Essa curiosidade me levou inicialmente à engenharia aeronáutica, influenciada pela minha família, cheia de primos engenheiros em diversas áreas.
+                        </p>
+
+                        <p>
+                        Durante esse período, tive meu primeiro contato com programação por meio do Portugol e me encantei: escrever códigos e ver processos acontecerem na tela me conquistou completamente. 
+                        Foi então que percebi que meu lugar não era mais estudando aerodinâmica — descobri que prefiro ver ideias decolarem na tela do computador!
+                        </p>
+
+                        <p>
+                        Hoje, sigo aprendendo e explorando diferentes áreas da tecnologia, ainda descobrindo onde posso brilhar. 
+                        Estou em transição de uma função fora do universo de TI para atuar diretamente na área, e com isso tenho adquirido experiências em low-code, bancos de dados, processos e automações. 
+                        Minha paixão é ver ideias se transformarem em resultados concretos na tela do computador, e estou sempre em busca de novos desafios e oportunidades para crescer.
+                        </p>
                 </div>
         </div>
     </section>
@@ -177,5 +188,6 @@
         <p>© 2025 Carine Rezende. Todos os direitos reservados.</p>
     </footer>
 
+<script type="module" src="script.js"></script>
 </body>
 </html>
