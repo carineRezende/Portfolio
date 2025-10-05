@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Carine Rezende</title>
+    <link rel="icon" href="img/logo_portfolioAzul.png" type="image/x-icon">
+    <title> Portfólio Carine Rezende</title>
 </head>
 <body>
 
@@ -86,8 +87,8 @@
                             com o banco de dados MySQL por meio de JDBC.
                         </p>
                     </div>
-               <li>
-
+                </li>
+                <li>
                     <div class="projeto-item">
                         <strong>Casos de SRAG Hospitalizados</strong>
                         <img src="img/SARG.png" alt="Tela dashboard">
@@ -130,36 +131,106 @@
 
     <section id="habilidades">
         <div class="habilidades">
-            <br>
-            <h2>Habilidades</h2>
-            <ul>
-                <li>
-                    <strong>Linguagens de Programação</strong> <br> Java (básico/intermediário): lógica, sintaxe, POO e conexão com banco de dados (JDBC)
-                </li>
-                <li>
-                    <strong>Desenvolvimento Web</strong> <br> HTML5, CSS3 (noções básicas); noções de frameworks front-end (Bootstrap ou similar); conhecimento inicial em consumo de APIs REST
-                </li>
-                <li>
-                    <strong>Banco de Dados</strong> <br> Modelagem conceitual (ER); SQL (comandos básicos - SELECT, INSERT, etc.) e modelagem com MySQL
-                </li>
-                <li>
-                    <strong>Ferramentas e Tecnologias</strong> <br> Git / GitHub (versionamento de código, commits, branches); Visual Studio Code, Eclipse e IntelliJ IDEA; noções de linha de comando (terminal Windows)
-                </li>
-                <li>
-                    <strong>Metodologias Ágeis</strong> <br> Conceitos de Scrum e Kanban (participação em projetos profissionais com quadro de tarefas e sprints)
-                </li>
-                <li>
-                    <strong>Ferramentas de Gestão/Automação (No-Code/Low-Code)</strong> <br> ClickUp, Zapier, Pluga, n8n
-                </li>
-            </ul>
-        </div>
+        <br>
+        <h2>Habilidades</h2>
+        <ul>
+        <li>
+            <button class="card">
+            <div class="card-inner">
+                
+                <div class="card-front">
+                    <img src="img/codeIcon.png" alt="Code Icon"> <br>
+                    <strong>Linguagens de Programação</strong>
+
+                </div>
+                <div class="card-back">
+                    Java (Intermediário): domínio de lógica de programação, sintaxe, Programação Orientada a Objetos (POO) e conexão com banco de dados via JDBC.
+                </div>
+            </div>
+            </button>
+        </li>
+
+        <li>
+            <button class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/webIcon.png" alt="Web Icon"> <br>
+                        <strong>Desenvolvimento Web</strong>
+                    </div>
+                    <div class="card-back">
+                        Conhecimento em HTML5 e CSS3. Familiaridade com frameworks front-end como Bootstrap e experiência inicial no consumo de APIs REST.
+                    </div>
+                </div>
+            </button>
+        </li>
+
+        <li>
+            <button class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/dataBaseIcon.png" alt="Database Icon"> <br>
+                        <strong>Banco de Dados</strong>
+                    </div>
+                    <div class="card-back">
+                        Modelagem conceitual (ER), utilização de comandos SQL (SELECT, INSERT, etc.) e modelagem de dados com MySQL.
+                    </div>
+                </div>
+            </button>
+        </li>
+
+        <li>
+            <button class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/toolsIcon.png" alt="Tools Icon"> <br>
+                        <strong>Ferramentas e Tecnologias</strong>
+                    </div>
+                    <div class="card-back">
+                        Experiência com Git/GitHub, VS Code, Eclipse, IntelliJ IDEA e linha de comando no terminal Windows.
+                    </div>
+                </div>
+            </button>
+        </li>
+
+        <li>
+            <button class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/agileIcon.png" alt="Agile Icon"> <br>
+                        <strong>Metodologias Ágeis</strong>
+                    </div>
+                    <div class="card-back">
+                        Conhecimento dos conceitos de Scrum e Kanban, com participação em projetos reais utilizando quadros de tarefas e sprints.
+                    </div>
+                </div>
+            </button>
+        </li>
+
+        <li>
+            <button class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/lowcodeIcone.png" alt="LowCode Icon"> <br>
+                        <strong>Ferramentas No-Code/Low-Code</strong>
+                    </div>
+                    <div class="card-back">
+                        Vivência com ClickUp, Zapier, Pluga e n8n para automação e integração de processos.
+                    </div>
+                </div>
+            </button>
+        </li>
+        </ul>
+    </div>
     </section>
     <br>
     <br>
-    <section id="contato">
-        <div class="contato">
+    <section id="faleComigo">
+        <div class="faleComigo">
+
             <h2>Contato</h2> <br>
-            <form>  
+
+            <form id="contact-form">  
+
                 <div class="linha">
                     <div class="campo">
                         <label for="nome">Nome:</label><br>
@@ -170,24 +241,41 @@
                         <input type="email" id="email" name="email" required> <br><br>
                     </div>
                 </div>
-                
+
+                <div class ="linha">
+                    <div class="campo">
+                        <label for="assutno">Assunto:</label><br>
+                        <input type="text" id="assunto" name="assunto" required> <br><br>
+                    </div>
+                </div>
+
                 <div class="linha">
                     <div class="campo">
                         <label for="mensagem">Mensagem:</label><br>
                         <textarea id="mensagem" name="mensagem" rows="4" required></textarea> <br><br>
                     </div>
                 </div>
+
                 <input type="submit" value="Enviar">
+
             </form>
         </div>
     </section>
+
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
     <br>
-    <br>      
+    <br> 
+
     <footer>
         <br>
         <p>© 2025 Carine Rezende. Todos os direitos reservados.</p>
     </footer>
 
-<script type="module" src="script.js"></script>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>

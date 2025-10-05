@@ -77,6 +77,7 @@ nav {
     padding: 20px;                 /* largura maior para retângulo */
     height: 300px;                      /* altura menor para retângulo horizontal */
     margin: 70px auto 0 auto;   
+    box-shadow: inset 0 -40px 30px -10px rgba(0, 0, 0, 0.4);
 }
 
 .inicio h3 {
@@ -141,15 +142,19 @@ nav {
     background-color: #31572c;
     margin: 0;
     padding: 20px;
+    padding-top: 5px;
     padding-bottom: 50px;
     border-radius: 15px;
 }
 
 .lista_projetos h2 {
-    color: white;
-    font-size: 25px;
+    font-size: 28px;
+    color: #ecf39e;
     text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
+
 
 .lista_projetos ul {
     display: grid;
@@ -171,6 +176,7 @@ nav {
     cursor: pointer;                /* Muda o cursor para indicar que o item é clicável */
     transition: all 0.3s ease;      /* Transição suave para todas as propriedades */ 
     height: 500px;                  /* Altura fixa para os itens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .lista_projetos ul li:hover {
@@ -270,55 +276,125 @@ nav {
     background-color: #4f772d;
     border-radius: 15px;
     margin: 0;
-    padding: 15px;
+    padding: 20px;
+    padding-top: 5px;
+    border-radius: 15px;
+    box-shadow: inset 0 -40px 30px -10px rgba(0, 0, 0, 0.4);
 }
 
 .habilidades h2 {
-    color: white;
-    font-size: 25px;
+    font-size: 28px;
+    color: #ecf39e;
     text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
 .habilidades ul {
     display: grid;
-    grid-template-columns: repeat(3, 350px);          /* Define 3 colunas com largura fixa de 350px */
-    grid-template-rows: repeat(2, 150px);             /* Define 2 linhas com altura fixa de 150px */
-    gap: 20px;
-    justify-content: center;
-    line-height: 1.5;
-    padding: 0;
-    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+    grid-auto-rows: 230px; /* altura fixa para manter tudo igual */
+    gap: 30px; /* espaçamento entre os cards */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: stretch; /* deixa todos os cards da linha com mesma altura */
+    max-width: 1200px; /* largura máxima do grid */
+    margin: 0 auto 50px auto; /* centraliza e dá espaço inferior */
+    padding: 0 20px;
     list-style: none;
-    padding-bottom: 50px;
+}
+
+
+.habilidades ul li {
+    list-style: none;
+}
+
+.habilidades img {
+    max-width: 100px; 
+    height: auto;  
+    margin-bottom: 10px;
+    outline: none;         
+    border: none;          
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    perspective: 1000px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 210px;
+    position: relative;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.habilidades ul li {
-    font-size: 14px;
+.card.show .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    line-height: 1.5;
+}
+
+.card-front {
     background-color: #31572c;
     color: white;
-    border-radius: 10px;
-    padding: 15px;
-    display: flex;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    word-wrap: break-word;              /*Quebra linha*/
+    padding-bottom: 30px;
 }
 
-.habilidades ul li:hover {
+.card-front::after {
+    content: "Clique para virar";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 5;
+    pointer-events: none; 
+}
+
+.card-front:hover {
     background-color: #90a955;
-    transform: scale(1.05);             /*aumenta ou diminui o tamanho de um elemento quando passa o mouse por cima*/
-    transition: 0.3s;                   /*tempo que leva pra acontecer a ação quando passa o mouse por cima*/
+    transform: scale(1.05);
 }
 
-.habilidades ul li strong {
-    font-size: 15px;
+.card-back {
+    color: #31572c;
+    background-color: #f0f0e0;
+    font-size: 16px;
+    transform: rotateY(180deg);
+}
+
+.habilidades strong {
+    font-size: 16px;
     margin-bottom: 5px;
-    text-align: center;
 }
 
-.contato {
+.faleComigo {
     background-color: #f0f0e0;
     border-radius: 15px;
     padding: 15px;
@@ -327,12 +403,12 @@ nav {
     padding-bottom: 50px;
 }
 
-.contato h2 {
+.faleComigo h2 {
     font-size: 25px;
     text-align: center;
 }
 
-.contato form {
+.faleComigo form {
     max-width: 700px;
     margin: 0 auto;
 }
@@ -368,7 +444,7 @@ input[type="submit"] {              /*seletor CSS que estiliza apenas os element
 }
 
 input[type="submit"]:hover {
-    background-color: whitesmoke;
+    background-color: #90a955;
     color: #31572c;
 }
 
@@ -386,6 +462,11 @@ footer {
     .habilidades ul {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
+        gap: 15px;
+    }
+
+    .habilidades img {
+        max-width: 80px;
     }
 
     .lista_projetos ul {
@@ -406,7 +487,7 @@ footer {
         height: 180px;
     }
 
-    .contato {
+    .faleComigo {
         margin: 0 100px;
     }
 }
@@ -486,6 +567,11 @@ footer {
         border-bottom: 2px solid #ecf39e;
     }
 
+    .inicio {
+        height: auto;
+        padding: 30px 20px;
+    }
+
     .sobre-mim {
         flex-direction: column;
         padding: 15px;
@@ -495,34 +581,63 @@ footer {
         grid-template-columns: 1fr;
         gap: 15px;
     }
+
+    .card-back {
+        font-size: 14px;
+    }
     
     .lista_projetos ul {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr; /* 1 coluna */
         gap: 20px;
-    }
-    
-    .lista_projetos ul li {
-        height: 320px;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    
-    .projeto-item img {
-        height: 200px;
-    }
-    
-    .contato {
-        margin: 0 20px;
+        justify-items: center;
     }
 
-    .lista_projetos ul li:active .projeto-overlay {
-        opacity: 1;
-        transform: translateY(0);
+    .lista_projetos ul li {
+        width: 100%;
+        max-width: 400px;
+        height: 340px; /* mesma altura para todos */
+        background-color: #4f772d;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .projeto-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        padding: 15px;
+    }
+
+    .projeto-item img {
+        width: 100%;
+        height: 200px;           
+        object-fit: contain;      
+        border-radius: 8px;
+        background-color: #4f772d;  /* fundo pra preencher o espaço */
+    }
+
+    .projeto-item strong {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .projeto-overlay {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .faleComigo {
+        margin: 0 20px;
     }
     
-    .lista_projetos ul li:active .projeto-item {
-        opacity: 0.1;
-    }
 }
 
 
