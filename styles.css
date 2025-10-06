@@ -637,7 +637,31 @@ footer {
     .faleComigo {
         margin: 0 20px;
     }
-    
+}
+
+@media (max-width: 400px) {
+
+    .sobre-mim img {
+        max-width: 200px; 
+    }
+
+    .habilidades ul {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .habilidades img {
+        max-width: 70px;
+    }
+
+    .faleComigo {
+        margin: 0 10px;
+        padding: 10px;
+    }
+
+    .linha {
+        flex-direction: column;
+    }
 }
 
 
